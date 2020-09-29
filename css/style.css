@@ -131,19 +131,19 @@ table {
   border-spacing: 0;
 }
 
-/* 設定文字樣式與大小 */
+/* 設定文字樣式與大小以及內容寬度 */
 
 body {
   font-size: 16px;
   font-family: "Noto Sans TC", sans-serif;
 }
 
-/* 社群連結，選單 */
-
 .wrap {
-  width: 1000px;
+  width: 1024px;
   margin: auto;
 }
+
+/* 社群連結，選單 */
 
 .social-link {
   background: #f1f1f1;
@@ -236,11 +236,11 @@ body {
 
 /* 廣告橫幅 */
 
-.banner {
+#banner {
   position: relative;
 }
 
-.banner .title {
+#banner .title {
   position: absolute;
   display: flex;
   align-items: center;
@@ -254,38 +254,38 @@ body {
   color: #fff;
 }
 
-.banner h2 {
+#banner h2 {
   line-height: 1.4;
   padding: 0 25px;
 }
 
-.banner img {
+#banner img {
   width: 100%;
 }
 
 /* 卡片內容 */
 
-.content {
+#content {
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 450px;
 }
 
-.content .item {
+#content .item {
   width: 300px;
   height: 320px;
   box-shadow: 0 1px 2px #aaa;
 }
 
-.content .item .imgs {
+#content .item .imgs {
   height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content .item .text {
+#content .item .text {
   margin: 0 15px;
   text-align: justify;
   font-size: 15px;
@@ -293,36 +293,49 @@ body {
   line-height: 1.5;
 }
 
-.content .item .text h3 {
+#content .item .text h3 {
   font-size: 18px;
   font-weight: 400;
   text-align: center;
 }
 
-.content .item .text ul {
+#content .item .text ul {
   list-style: disc inside;
 }
 
 /* 比較表 */
 
-.comparison h2{
+#comparison h2{
   font-size: 24px;
   margin-bottom: 30px;
   font-weight: 700;
+  text-align: center;
 }
 
-.comparison table{
-  width: 80%;
+#comparison table{
+  width: 85%;
   margin: auto;
-  border-bottom: 1px solid #ccc;
 }
 
-.comparison td,
-.comparison th{
-  border-top: 1px solid #ccc;
-  padding: 12px;
+#comparison td,
+#comparison th{
+  box-sizing: border-box;
+  width: 25%;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 12px 12px 24px;
+  text-align: left;
 }
 
-.comparison th{
-  background: #ddd;
+#comparison th{
+  background: #f7f7f7;
+  font-weight: 500;
+}
+
+#comparison td {
+  font-weight: 300;
+}
+
+#comparison .better {
+  color: #00cb9b;
 }
