@@ -217,15 +217,19 @@ body {
 .menu li a:after {
   content: "";
   position: absolute;
-  height: 0;
+  height: 5px;
   width: 100%;
   left: 0;
   bottom: 0;
   background: #00cb9b;
+  transition: transform 0.2s ease-in;
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 
 .menu li a:hover:after {
-  height: 5px;
+  transform-origin: bottom left;
+  transform: scaleX(1);
 }
 
 .clearfix:after {
@@ -346,6 +350,7 @@ body {
   padding: 40px 30px 20px;
   background: linear-gradient(180deg, #00654a, #009972);
   color: #fff;
+  margin-bottom: 27px;
 }
 
 #contact h2 {
@@ -401,4 +406,27 @@ body {
   border-radius: 5px;
   display: block;
   margin-left: auto;
+  outline: none;
+  cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+  background: #74ffdf;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 95px;
+  box-sizing: border-box;
+  padding: 0 22px;
+}
+
+footer .contact-us li {
+  margin-bottom: 10px;
+}
+
+footer .contact-us .highlight {
+  color: #cd3b72;
 }
