@@ -217,6 +217,7 @@ body {
   position: relative;
   padding: 20px 13px;
   color: #00cb9b;
+  white-space: nowrap;
   text-decoration: none;
 }
 
@@ -281,7 +282,7 @@ body {
 #content {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 50px;
 }
 
@@ -461,8 +462,19 @@ footer .contact-us .highlight {
   }
 
   .menu ul li {
-    width: 33.33%;
-    margin: 0;
+    width: 24%;
+    margin: 0 4.666%;
+  }
+
+  #content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #content .item {
+    width: 80%;
+    margin-bottom: 30px;
+    min-height: 300px;
   }
 
   footer {
@@ -479,17 +491,8 @@ footer .contact-us .highlight {
 @media (max-width: 575px) {
   .menu ul li {
     float: none;
-    width: 70%;
+    width: 33%;
     margin: auto;
-  }
-
-  #content {
-    flex-direction: column;
-  }
-
-  #content .item {
-    width: 80%;
-    margin-bottom: 30px;
   }
 
   #contact form {
